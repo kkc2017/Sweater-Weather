@@ -6,7 +6,7 @@
 import urllib.request, json
 
 def geo(latitude, longitude):
-    key = "ea46d042f9697f4e"
+    key = "9af690c1b08dcb17"
     # source code: https://stackoverflow.com/questions/12934699/selecting-fields-from-json-output
     f = urllib.request.urlopen(f"http://api.wunderground.com/api/{key}/conditions/q/{latitude},{longitude}.json")
     values = json.load(f)
