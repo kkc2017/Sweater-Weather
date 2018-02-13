@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Temperature and Weather
+{% endblock %}
+
+{% block main %}
+    <p>
+        <form action="/temp" enctype="multipart/form-data" method="post">
+            ({{ observation_time }})<br>
+            Current Location: {{ city_state }} (Country: {{ country }}) <br>
+            Temperature: {{ temp }} <br>
+            Weather Condition: {{ weather }} <br>
+            Precipitation Today: {{ precipitation }} <br><br>
+
+            <b><center> Suggested Articles of Clothing: </center></b>
+            <center> (Select all articles that you don't have and would like to buy; the next page will give you shopping
+            links to those articles!) </center><br>
+
+            <label><input type="checkbox" name="clothes1"> {{ clothes[0]['Clothing'] }} </input></label>
+            <br><br>
+            <label><input type="checkbox" name="clothes2"> {{ clothes[1]['Clothing'] }} </input></label>
+            <br><br>
+            <label><input type="checkbox" name="clothes3"> {{ clothes[2]['Clothing'] }} </input></label>
+            <br><br>
+            <label><input type="checkbox" name="clothes4"> {{ clothes[3]['Clothing'] }} </input></label>
+            <br><br>
+            <button type="submit">Submit</button>
+            <br><br>
+        </form>
+    </p>
+{% endblock %}
+

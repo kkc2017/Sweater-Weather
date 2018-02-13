@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Links
+{% endblock %}
+
+{% block main %}
+    <p>
+        <form action="/links" enctype="multipart/form-data" method="post">
+            <br>
+            CLOTHES YOU DON'T HAVE/WANT TO BUY: <br>
+            {% for clothes in noClothes %}
+                <label><li>{{clothes}}</li></label><br>
+            {% endfor %}
+            <br>
+            SHOPPING LINKS: <br>
+            {% for link in links %}
+                <label><li><a href="{{ link['Link'] }}">Link to Clothing</a></li></label><br>
+            {% endfor %}
+            <br><br>
+            HAPPY SHOPPING!
+            <br><br>
+            <button type="submit">Return to Home Page</button>
+        </form>
+    </p>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <div class="col">
+        <form action="/" enctype="multipart/form-data" method="post">
+            Which type of clothing do you prefer to wear? <br><br>
+            <td><input name="gender" type="radio" value="male"> Male Clothing </input></td>
+            <br><br>
+            <td><input name="gender" type="radio" value="female"> Female Clothing </input></td>
+            <br><br>
+            <button type="submit">Next</button>
+            <body>
+            <!--Gets information on the user's current location, including latitude and longitude-->
+            <!--source code: https://www.w3schools.com/html/html5_geolocation.asp-->
+            <script>
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function(position) {
+                        $.post("/location", position.coords);
+                    });
+                }
+            </script>
+            </body>
+        </form>
+    </div>
+
+{% endblock %}
+
