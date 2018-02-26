@@ -54,6 +54,7 @@ def index():
 def temp():
     # determine whether the weather from the table "temp_weather" should be snow, rain, or sunny, based on the current weather
     global weather_str
+    global val
     if 'Snow' in val['weather'] or 'Ice' in val['weather'] or 'Hail' in val['weather']:
         weather_str = "snow"
     elif 'Rain' in val['weather'] or 'Thunderstorm' in val['weather'] or 'Drizzle' in val['weather']:
