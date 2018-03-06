@@ -8,7 +8,9 @@ for the user's benefit, in order to give the user a heads up about whether today
 it does not factor into the clothing recommendations given.
 
 Note: In order for the website to load, Flask must be running (type "flask run" into the terminal, then hit enter).
-The user first goes to the home page, which is https://ide50-karenchen.cs50.io:8080/. The browser then states,
+The user first goes to the home page, which is https://ide50-karenchen.cs50.io:8080/. 
+(IMPORTANT: Make sure that the link starts with "https" and not "http", due to security concerns!) 
+The browser then states,
 "The website “https://ide50-karenchen.cs50.io:8080” would like to use your current location," to which the
 user must allow the website to use his/her current location by clicking "allow". Then, at the
 home page, the user selects what gender clothing he/she
